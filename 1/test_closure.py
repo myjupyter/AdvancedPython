@@ -1,4 +1,4 @@
-def test():
+def test:
     a = []
     for i in range(5):
         def foo(b=i):
