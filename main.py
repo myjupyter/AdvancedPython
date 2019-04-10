@@ -1,5 +1,8 @@
 from Models import Model
 from Fields import *
+from db_connection import *
+
+init_db('localhost', 'root', 'lumen23291633')
 
 class User(Model):
     
@@ -20,5 +23,8 @@ class Stuff(User):
     Post = IntField(required=True, default = -1)
 
 a = Stuff()
-
+a.id = 0
+a.save()
+a = Stuff(Sex=False)
+a.id = 1
 a.save()
